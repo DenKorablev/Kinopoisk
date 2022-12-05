@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-import CardFilm from '../card-film/card-film';
+import CardFilmScreen from '../card-film-screen/card-film-screen';
 
-const MainPage = ({films}) => {
+const MainPageScreen = ({films}) => {
   return <>
     <section className="movie-card">
       <div className="movie-card__bg">
@@ -100,7 +100,7 @@ const MainPage = ({films}) => {
         <div className="catalog__movies-list">
           {films.map((film) => {
             return (
-              <CardFilm key={film.id} film={film}/>
+              <CardFilmScreen key={film.id} film={film}/>
             );
           })}
         </div>
@@ -127,7 +127,7 @@ const MainPage = ({films}) => {
   </>;
 };
 
-MainPage.propTypes = {
+MainPageScreen.propTypes = {
   films: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string.isRequired,
@@ -138,4 +138,4 @@ MainPage.propTypes = {
   )
 };
 
-export default MainPage;
+export default MainPageScreen;

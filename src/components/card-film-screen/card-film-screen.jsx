@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-const CardFilm = ({film}) => {
+const CardFilmScreen = ({film}) => {
   return <>
     <article className="small-movie-card catalog__movies-card">
       <div className="small-movie-card__image">
@@ -14,7 +14,7 @@ const CardFilm = ({film}) => {
   </>;
 };
 
-CardFilm.propTypes = {
+CardFilmScreen.propTypes = {
   film: PropTypes.shape({
     id: PropTypes.string.isRequired,
     img: PropTypes.string.isRequired,
@@ -22,4 +22,4 @@ CardFilm.propTypes = {
     href: PropTypes.string.isRequired,
   })
 };
-export default CardFilm;
+export default CardFilmScreen;
